@@ -1,2 +1,2 @@
-# MDM-Experential-Learning_CD25065
+# Interactive Simon Says Game
 This is my college project.
