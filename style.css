@@ -1,0 +1,627 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* -------------------------
+   BODY
+------------------------- */
+
+body {
+    min-height: 100vh;
+
+    font-family: "Inter", sans-serif;
+
+    color: #ffffff;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #263b73,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #4c1d65,
+            transparent 35%
+        ),
+        #090d18;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    transition: 0.5s ease;
+}
+
+
+/* -------------------------
+   MAIN CONTAINER
+------------------------- */
+
+.container {
+    width: 100%;
+    max-width: 900px;
+}
+
+
+/* -------------------------
+   HEADER
+------------------------- */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+
+.logo-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    font-size: 25px;
+    font-weight: 800;
+
+    background: linear-gradient(
+        135deg,
+        #7c3aed,
+        #4f46e5
+    );
+
+    box-shadow:
+        0 10px 30px rgba(79, 70, 229, 0.35);
+}
+
+
+.logo h1 {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+
+.logo p {
+    margin-top: 3px;
+
+    color: #8d99b5;
+
+    font-size: 12px;
+}
+
+
+/* -------------------------
+   GAME INFORMATION
+------------------------- */
+
+.game-info {
+    display: flex;
+    gap: 10px;
+}
+
+
+.info-box {
+    min-width: 75px;
+
+    padding: 10px 14px;
+
+    text-align: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    backdrop-filter: blur(10px);
+}
+
+
+.info-box span {
+    display: block;
+
+    color: #7f8ba6;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+.info-box strong {
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 20px;
+}
+
+
+/* -------------------------
+   GAME CARD
+------------------------- */
+
+.game-card {
+    padding: 40px;
+
+    border-radius: 28px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    background: rgba(17, 24, 39, 0.75);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.35);
+
+    text-align: center;
+}
+
+
+/* -------------------------
+   GAME HEADER
+------------------------- */
+
+.game-header {
+    margin-bottom: 30px;
+}
+
+
+.game-header h2 {
+    font-size: 28px;
+
+    font-weight: 800;
+
+    margin-bottom: 8px;
+}
+
+
+.game-header p {
+    color: #8995ae;
+
+    font-size: 14px;
+}
+
+
+/* -------------------------
+   SIMON BOARD
+------------------------- */
+
+.simon-board {
+    width: 390px;
+    height: 390px;
+
+    margin: 0 auto 30px;
+
+    padding: 12px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    border-radius: 50%;
+
+    background: #050810;
+
+    box-shadow:
+        0 0 0 8px rgba(255, 255, 255, 0.03),
+        0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+
+/* -------------------------
+   SIMON BUTTON
+------------------------- */
+
+.simon-button {
+    position: relative;
+
+    border: none;
+
+    cursor: pointer;
+
+    border-radius: 45%;
+
+    transition:
+        transform 0.15s ease,
+        filter 0.15s ease,
+        box-shadow 0.15s ease;
+
+    outline: none;
+}
+
+
+/* Inner circle */
+
+.simon-button span {
+    position: absolute;
+
+    width: 18px;
+    height: 18px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    box-shadow:
+        0 0 10px rgba(255, 255, 255, 0.15);
+
+    transition: 0.2s;
+}
+
+
+/* -------------------------
+   BUTTON COLORS
+------------------------- */
+
+.red {
+    background:
+        linear-gradient(
+            145deg,
+            #ff4d6d,
+            #c9184a
+        );
+
+    box-shadow:
+        inset 0 -8px 15px rgba(0, 0, 0, 0.2),
+        0 10px 25px rgba(255, 30, 80, 0.18);
+}
+
+
+.blue {
+    background:
+        linear-gradient(
+            145deg,
+            #38bdf8,
+            #2563eb
+        );
+
+    box-shadow:
+        inset 0 -8px 15px rgba(0, 0, 0, 0.2),
+        0 10px 25px rgba(37, 99, 235, 0.18);
+}
+
+
+.green {
+    background:
+        linear-gradient(
+            145deg,
+            #34d399,
+            #059669
+        );
+
+    box-shadow:
+        inset 0 -8px 15px rgba(0, 0, 0, 0.2),
+        0 10px 25px rgba(5, 150, 105, 0.18);
+}
+
+
+.yellow {
+    background:
+        linear-gradient(
+            145deg,
+            #facc15,
+            #eab308
+        );
+
+    box-shadow:
+        inset 0 -8px 15px rgba(0, 0, 0, 0.2),
+        0 10px 25px rgba(234, 179, 8, 0.18);
+}
+
+
+/* -------------------------
+   HOVER EFFECT
+------------------------- */
+
+.simon-button:hover {
+    transform: scale(1.025);
+
+    filter: brightness(1.1);
+}
+
+
+.simon-button:hover span {
+    width: 22px;
+    height: 22px;
+
+    background: rgba(255, 255, 255, 0.3);
+}
+
+
+/* -------------------------
+   ACTIVE / FLASH EFFECT
+------------------------- */
+
+.simon-button.active {
+    transform: scale(0.94);
+
+    filter: brightness(1.8);
+
+    box-shadow:
+        0 0 25px rgba(255, 255, 255, 0.7),
+        0 0 60px rgba(255, 255, 255, 0.35);
+}
+
+
+.simon-button.active span {
+    width: 25px;
+    height: 25px;
+
+    background: white;
+
+    box-shadow:
+        0 0 20px white;
+}
+
+
+/* -------------------------
+   START BUTTON
+------------------------- */
+
+.start-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    min-width: 180px;
+
+    padding: 14px 25px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #4f46e5
+        );
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(79, 70, 229, 0.3);
+
+    transition: 0.2s ease;
+}
+
+
+.start-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 15px 35px rgba(79, 70, 229, 0.4);
+}
+
+
+.start-button:active {
+    transform: scale(0.97);
+}
+
+
+.play-icon {
+    font-size: 12px;
+}
+
+
+/* -------------------------
+   RULES
+------------------------- */
+
+.rules {
+    margin-top: 35px;
+
+    padding-top: 25px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.07);
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 35px;
+}
+
+
+.rule {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.rule span {
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    color: #a78bfa;
+
+    background: rgba(124, 58, 237, 0.12);
+
+    font-size: 9px;
+
+    font-weight: 800;
+}
+
+
+.rule p {
+    color: #79849d;
+
+    font-size: 11px;
+}
+
+
+/* -------------------------
+   GAME OVER
+------------------------- */
+
+.game-over {
+    animation: shake 0.4s ease;
+}
+
+
+.game-over .game-card {
+    border-color: rgba(255, 70, 70, 0.3);
+}
+
+
+@keyframes shake {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-8px);
+    }
+
+    50% {
+        transform: translateX(8px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/* -------------------------
+   FOOTER
+------------------------- */
+
+footer {
+    margin-top: 20px;
+
+    text-align: center;
+
+    color: #59657e;
+
+    font-size: 11px;
+}
+
+
+footer span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #3f4a60;
+}
+
+
+/* -------------------------
+   RESPONSIVE DESIGN
+------------------------- */
+
+@media (max-width: 650px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .header {
+        flex-direction: column;
+
+        gap: 20px;
+
+        align-items: stretch;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .game-info {
+        justify-content: center;
+    }
+
+    .game-card {
+        padding: 25px 15px;
+    }
+
+    .simon-board {
+        width: 320px;
+        height: 320px;
+    }
+
+    .rules {
+        flex-direction: column;
+
+        gap: 12px;
+
+        align-items: center;
+    }
+}
+
+
+@media (max-width: 380px) {
+
+    .simon-board {
+        width: 270px;
+        height: 270px;
+    }
+
+    .game-header h2 {
+        font-size: 23px;
+    }
+
+    .info-box {
+        min-width: 65px;
+    }
+}
